@@ -1,0 +1,43 @@
+How to Run the Vehicle Detection and Counting Program
+
+This program uses YOLO object detection to detect and count vehicles in a video. It processes a video file, identifies vehicles like cars, motorcycles, buses, and trucks, tracks them, and counts them when they cross a line.
+
+Prerequisites:
+- Python 3.10 or higher
+- Virtual environment set up in the 'Ven' folder
+- Required packages: ultralytics, opencv-python
+
+Installation Steps:
+1. Activate the virtual environment:
+   - On Windows (PowerShell): & .\Ven\Scripts\Activate.ps1
+   - On macOS/Linux: source Ven/bin/activate
+
+2. Install dependencies if needed:
+   pip install ultralytics opencv-python
+
+Setup:
+1. Make sure these files are in the project directory:
+   - best.pt (the YOLO model file)
+   - video4.mp4 (the video to process)
+
+2. If using a different video, change the video path in count1.py.
+
+Running the Program:
+1. Activate the virtual environment.
+2. Run: python count1.py
+3. A window will show the video with detected vehicles. Vehicles crossing the red line are counted.
+4. Press ESC to exit.
+
+Output:
+- Bounding boxes around vehicles
+- Real-time count of vehicles that crossed the line
+
+Customization:
+- Change vehicle_classes list to modify detected vehicle types
+- Adjust line_y for counting line position
+- Modify frame_width and frame_height for resolution
+
+Troubleshooting:
+- Ensure best.pt and video4.mp4 are present
+- Check if packages are installed correctly
+- Verify the model file is valid
